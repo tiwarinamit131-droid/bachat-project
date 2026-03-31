@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BACHAT | Analytics</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BACHAT</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="groups.html">Groups</a></li>
+        <li><a href="add-expense.html">Add Expense</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="reminders.html">Reminders</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="container">
+      <h1>Analytics</h1>
+      <div class="analytics-cards" id="analytics-cards"></div>
+      <div style="max-width:400px;margin:2rem auto;">
+        <canvas id="category-pie"></canvas>
+      </div>
+      <div class="limits-section card" style="margin:2rem auto;max-width:500px;">
+        <h2>Set Your Spending Limits</h2>
+        <form id="limits-form">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;">
+            <div>
+              <label>Daily Limit (₹)</label>
+              <input type="number" id="limit-daily" min="0" step="1">
+            </div>
+            <div>
+              <label>Weekly Limit (₹)</label>
+              <input type="number" id="limit-weekly" min="0" step="1">
+            </div>
+            <div>
+              <label>Monthly Limit (₹)</label>
+              <input type="number" id="limit-monthly" min="0" step="1">
+            </div>
+          </div>
+          <button type="submit" class="btn" style="margin-top:1rem;">Save Limits</button>
+          <div id="limits-msg" class="form-msg"></div>
+        </form>
+      </div>
+      <div class="bachat-score-section">
+        <h2>Bachat Score <span style="font-size:1rem;font-weight:normal;">(0-10)</span></h2>
+        <div id="bachat-score" class="bachat-score-card"></div>
+      </div>
+      <div class="currency-section card" style="margin:2rem auto;max-width:500px;">
+        <h2>Currency Converter</h2>
+        <form id="currency-form" style="display:flex;gap:0.7rem;flex-wrap:wrap;align-items:center;">
+          <input type="number" id="currency-amount" placeholder="Amount" min="0" step="any" style="width:100px;">
+          <select id="currency-from"></select>
+          <button type="button" id="currency-switch" title="Switch currencies" style="background:#e0f7e9;border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;transition:background 0.2s;">⇄</button>
+          <select id="currency-to"></select>
+          <button type="submit" class="btn">Convert</button>
+        </form>
+        <div id="currency-result" class="form-msg" style="font-size:1.1rem;margin-top:1rem;"></div>
+      </div>
+      <div class="tip-section" style="margin-top:2rem;">
+        <h3>Personalized Bachat Tip</h3>
+        <div id="personal-bachat-tip" class="tip-card"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 BACHAT | Made for College Project</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>

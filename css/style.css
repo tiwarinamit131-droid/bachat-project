@@ -1,0 +1,308 @@
+/* BACHAT - style.css */
+:root {
+  --primary: #1db954;
+  --primary-dark: #168f3e;
+  --background: #f7faf7;
+  --card-bg: #fff;
+  --text: #222;
+  --accent: #e0f7e9;
+  --danger: #e74c3c;
+  --shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
+}
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.nav-links li a:hover, .nav-links li a.active {
+  background: var(--primary-dark);
+}
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem 1rem;
+}
+.hero {
+  background: var(--accent);
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+.hero h1 {
+  font-size: 2.7rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-dark);
+}
+.tagline {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--primary-dark);
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+input, select, button {
+  font-family: inherit;
+}
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cce5d6;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f9fdf9;
+  transition: border 0.2s;
+}
+input:focus, select:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+.member-input-row {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+.members-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.members-list span {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.98rem;
+}
+.groups-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.expense-history {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.bachat-score-section {
+  text-align: center;
+}
+.bachat-score-card {
+  background: var(--primary);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 1.2rem 0;
+  margin: 0 auto;
+  width: 180px;
+  box-shadow: var(--shadow);
+}
+/* Enhanced Bachat Tip section */
+.tip-section {
+  margin: 2.5rem auto 0 auto;
+  max-width: 520px;
+  text-align: center;
+}
+.tip-card {
+  background: linear-gradient(90deg, #1db954 0%, #168f3e 100%);
+  color: #fff;
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.18rem;
+  font-weight: 500;
+  box-shadow: 0 4px 18px rgba(30,185,84,0.13);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.tip-card:before {
+  content: "💡 Bachat Tip";
+  position: absolute;
+  top: -0.7rem;
+  left: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e0f7e9;
+  opacity: 0.8;
+}
+.tip-card.positive {
+  background: linear-gradient(90deg, #1db954 0%, #4be37a 100%);
+  color: #fff;
+}
+.tip-card.negative {
+  background: linear-gradient(90deg, #e74c3c 0%, #f4b400 100%);
+  color: #fff;
+}
+.tip-card.neutral {
+  background: linear-gradient(90deg, #168f3e 0%, #f4b400 100%);
+  color: #fff;
+}
+.form-msg {
+  color: var(--danger);
+  font-size: 0.98rem;
+  margin-top: 0.5rem;
+  min-height: 1.2em;
+}
+#dashboard-summary {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+#balance-summary {
+  flex: 1;
+}
+#total-expenses {
+  flex: 1;
+}
+/* Removed invalid .reminders-list .tip-card block */
+.tip-card .tip-icon {
+  font-size: 1.7rem;
+  margin-right: 0.5rem;
+}
+.tip-card .tip-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e0f7e9;
+  margin-right: 1.2rem;
+}
+.tip-card .tip-text {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #fff;
+}
+/* Analytics card category colors */
+.analytics-card-food { background: linear-gradient(90deg, #ffb347 0%, #ffcc80 100%); color: #7a4f01; }
+.analytics-card-travel { background: linear-gradient(90deg, #42a5f5 0%, #b3e5fc 100%); color: #0d47a1; }
+.analytics-card-shopping { background: linear-gradient(90deg, #e040fb 0%, #f8bbd0 100%); color: #6a1b9a; }
+.analytics-card-misc { background: linear-gradient(90deg, #b2dfdb 0%, #fbc02d 100%); color: #37474f; }
+.about-card {
+  background: var(--accent);
+  color: var(--primary-dark);
+  border-radius: 10px;
+  padding: 1.5rem 1.2rem;
+  box-shadow: var(--shadow);
+}
+footer {
+  background: #eaf7ea;
+  color: var(--primary-dark);
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+@media (max-width: 800px) {
+  .navbar, main {
+    max-width: 98vw;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .dashboard-summary {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+  .hero {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .container {
+    padding: 0 0.2rem;
+  }
+}

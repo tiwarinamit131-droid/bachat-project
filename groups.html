@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BACHAT | Groups</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BACHAT</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="groups.html">Groups</a></li>
+        <li><a href="add-expense.html">Add Expense</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="reminders.html">Reminders</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="container">
+      <h1>Create a Group</h1>
+      <form id="group-form" class="card">
+        <label for="group-name">Group Name</label>
+        <input type="text" id="group-name" required>
+        <label for="member-name">Add Member</label>
+        <div class="member-input-row">
+          <input type="text" id="member-name">
+          <button type="button" id="add-member-btn" class="btn">Add</button>
+        </div>
+        <div id="members-list" class="members-list"></div>
+        <button type="submit" class="btn">Create Group</button>
+        <div id="group-form-msg" class="form-msg"></div>
+      </form>
+      <h2>Created Groups</h2>
+      <div id="groups-list" class="groups-list"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 BACHAT | Made for College Project</p>
+  </footer>
+  <script src="js/app.js"></script>
+  <script src="js/expenses.js"></script>
+</body>
+</html>

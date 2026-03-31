@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BACHAT | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BACHAT</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="groups.html">Groups</a></li>
+        <li><a href="add-expense.html">Add Expense</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="reminders.html">Reminders</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>BACHAT</h1>
+      <h2 class="tagline">Aaj Bachat Kari?</h2>
+      <p class="intro">Manage shared expenses with friends, roommates, or groups easily. Track, split, and settle up without awkwardness!</p>
+      <div class="hero-buttons">
+        <a href="groups.html" class="btn">Create Group</a>
+        <a href="add-expense.html" class="btn">Add Expense</a>
+        <a href="dashboard.html" class="btn">View Dashboard</a>
+      </div>
+    </section>
+    <section class="tip-section">
+      <h3>Bachat Tip of the Day</h3>
+      <div id="tip-of-day" class="tip-card"></div>
+    </section>
+    <section class="user-section card" style="max-width:400px;margin:2rem auto 0 auto;">
+      <h3>Your Name</h3>
+      <form id="user-form">
+        <input type="text" id="user-name" placeholder="Enter your name" required style="width:70%;margin-right:1rem;">
+        <button type="submit" class="btn">Save</button>
+      </form>
+      <div id="user-msg" class="form-msg"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 BACHAT | Made for College Project</p>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
