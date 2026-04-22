@@ -134,28 +134,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const currencyResult = document.getElementById('currency-result');
   const currencySwitch = document.getElementById('currency-switch');
 
-  // List of major currencies
+  
   const currencyList = [
     { code: 'INR', name: 'Indian Rupee' },
     { code: 'USD', name: 'US Dollar' },
     { code: 'EUR', name: 'Euro' },
-    { code: 'GBP', name: 'British Pound' },
-    { code: 'JPY', name: 'Japanese Yen' },
-    { code: 'CNY', name: 'Chinese Yuan' },
-    { code: 'CAD', name: 'Canadian Dollar' },
-    { code: 'AUD', name: 'Australian Dollar' },
-    { code: 'SGD', name: 'Singapore Dollar' },
-    { code: 'AED', name: 'UAE Dirham' },
-    { code: 'CHF', name: 'Swiss Franc' },
-    { code: 'ZAR', name: 'South African Rand' },
-    { code: 'BRL', name: 'Brazilian Real' },
-    { code: 'RUB', name: 'Russian Ruble' },
-    { code: 'KRW', name: 'South Korean Won' },
-    { code: 'MXN', name: 'Mexican Peso' },
-    { code: 'THB', name: 'Thai Baht' },
-    { code: 'SEK', name: 'Swedish Krona' },
-    { code: 'NZD', name: 'New Zealand Dollar' },
-    { code: 'SAR', name: 'Saudi Riyal' }
+     
   ];
 
   function populateCurrencySelects() {
@@ -182,23 +166,8 @@ document.addEventListener('DOMContentLoaded', function () {
     INR: 1,
     USD: 0.012,
     EUR: 0.011,
-    GBP: 0.0097,
-    JPY: 1.81,
-    CNY: 0.087,
-    CAD: 0.016,
-    AUD: 0.018,
-    SGD: 0.016,
-    AED: 0.044,
-    CHF: 0.011,
-    ZAR: 0.22,
-    BRL: 0.061,
-    RUB: 1.09,
-    KRW: 16.5,
-    MXN: 0.20,
-    THB: 0.44,
-    SEK: 0.13,
-    NZD: 0.019,
-    SAR: 0.045
+    
+    
   };
 
   function fetchRate(from, to) {
